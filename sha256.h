@@ -31,10 +31,6 @@
 #include <istream>
 #include <vector>
 
-#ifdef CURRENT_DEFAULT_NAMESPACE_NAME
-namespace CURRENT_DEFAULT_NAMESPACE_NAME {
-#endif
-
 namespace sha256 {
 
   const size_t BlockSize = 512 / 8;
@@ -343,6 +339,3 @@ namespace sha256 {
 
 }
 
-#ifdef CURRENT_DEFAULT_NAMESPACE_NAME
-}
-#endif

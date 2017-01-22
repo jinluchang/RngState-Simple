@@ -35,9 +35,7 @@
 #include <cstdio>
 #include <sstream>
 
-#ifdef CURRENT_DEFAULT_NAMESPACE_NAME
-namespace CURRENT_DEFAULT_NAMESPACE_NAME {
-#endif
+namespace qrngstate {
 
 const int RngStateSizeUint32 = 6 * 2;
 
@@ -297,6 +295,8 @@ inline double gRandGen(RngState& rs, const double center = 0.0, const double sig
   }
 }
 
-#ifdef CURRENT_DEFAULT_NAMESPACE_NAME
 }
+
+#ifndef USE_NAMESPACE
+using namespace qrngstate;
 #endif
